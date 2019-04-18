@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+
+{% block header %}{% endblock %}
+
+{% block content %} 
+
+<form method="POST">
+    Conjugation <input type="text" id="inifinitive" name="infinitive">
+    <input type="submit">
+</form>
+
+{% endblock %}
+
+{% block scripts %}
+<script src="{{url_for('.static', filename='scripts.js')}}"></script>
+{{super()}}
+{% endblock %}
