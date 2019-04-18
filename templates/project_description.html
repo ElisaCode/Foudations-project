@@ -1,20 +1,32 @@
 {% extends "layout.html" %}
 
 
-{% block header %}{% endblock %}
+{% block header %}
+
+{% endblock %}
 
 {% block content %} 
-<h1> Project description: </h1>
+<div>
+    <h2>Technologies applied:</h2>
+    <ul>
+        <li> Web scraping using Beautiful Soup Library and Python;</li>
+        <li> Creating database and inserting data from web scraping with Python </li>
+        <li> Setting server using Flask</li>
+        <li> Jinja2 to create page templates </li>
+        <li> And finally html and CSS to display the information</li>
+    </ul>
+    <p><a href="https://github.com/ElisaCode/Foudations-project.git">GitHub link:</a></p>
+</div>
 
 <div>
-    <p>Technologies applied:</p>
+    <h2>Documentation:</h2>
     <ul>
-        <li> Web scraping using Beautiful Soup</li>
-        <li> </li>
-        <li> </li>
-        <li> </li>
-        <li> </li>
-    </ul>
+        <li> <a href="https://www.w3schools.com/sql/default.asp">w3schools SQL</a></li>
+        <li> <a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/">BeautifulSoup</a> </li>
+        <li> <a href="http://flask.pocoo.org/docs/0.12/tutorial/views/" >Flask</a></li>
+        <li> <a href="http://jinja.pocoo.org/">Jinja2</a></li>
+        <li> <a href="http://www.sqlitetutorial.net/sqlite-python/" >SQL Python</a></li>
+    
 </div>
 
 {% endblock %}
