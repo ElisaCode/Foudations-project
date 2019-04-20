@@ -121,20 +121,6 @@ html, body {
     
   }
 
-  div.container {
-    display: flex;
-    width:98%; 
-    margin:1%;
-    position: static;
-    padding: 10%;
-  }
-
-  
-  th {
-    height: 50px;
-    text-align: center;
-    border: 1px solid black;
-  }
   
   main {
     display: flex;

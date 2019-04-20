@@ -48,18 +48,13 @@ app = Flask(__name__)
 def index():
   print(request.method)
   print(request.__dict__)
-    #infinitive = request.form.get('infinitive') # [] makes the field mandatory, otherwise we can use ()
   if request.method == 'POST':
     print(request.form)
     #print(request.form['infinitive'])
     verb_query = request.form['infinitive']
-    result_query = query_verb_conj(verb_query) #por enquanto ela s'o retorna falar
+    result_query = query_verb_conj(verb_query) 
     print(result_query)
     return render_template('verb_result.html', verbs=result_query)
-
-        #return 
-        #return render_template('verbs_list.html') 
-        #'<h1> The verb is : {}</h1>'.format('infinitive')
     
   return render_template('index.html')
 
