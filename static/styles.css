@@ -5,7 +5,7 @@ html, body {
   }
   
   html {
-    font-size: 10px;
+    font-size: 12px;
     background-color: #a9a9a9;
   }
   
@@ -22,7 +22,11 @@ html, body {
     color: #2a2a2a;
   }
   
-  p, input, li {
+  th {
+    font-family: 'Roboto Condensed', sans-serif;
+    color: #2a2a2a;}
+
+  p, input, li, td {
     font-family: 'Roboto Condensed', sans-serif;
     color: #2a2a2a;
   }
@@ -42,7 +46,7 @@ html, body {
     font-size: 2.2rem;
   }
   
-  p, li {
+  p, li, th, td {
     font-size: 1.6rem;
     line-height: 1.5;
   }
@@ -68,12 +72,6 @@ html, body {
   h1 {
     flex: 5;
     text-transform: uppercase;
-  }
-  
-  header img {
-    display: block;
-    height: 60px;
-    padding-top: 20.15px;
   }
   
   nav {
@@ -107,6 +105,14 @@ html, body {
   }
   
   /* || main layout */
+
+  table {
+    border-collapse: collapse;
+  }
+  
+  table, th, td {
+    border: 1px solid black;
+  }
   
   main {
     display: flex;

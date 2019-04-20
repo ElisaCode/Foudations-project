@@ -3,7 +3,8 @@ from flask import render_template, redirect, url_for, request
 import sqlite3
 from sqlite3 import Error
 from flask import current_app, g
-from flask.cli import with_appcontext
+
+
 
 
 
@@ -26,9 +27,12 @@ def create_connection():
 def query_verb_conj(infinitive):
   conn = create_connection()
   cur = conn.cursor()
-  cur.execute("SELECT * FROM  verbs WHERE infinitivo=?", (infinitive,))
+  cur.execute("SELECT * FROM  verbs WHERE infinitive=?", (infinitive,))
   result = cur.fetchall()
-  return result  
+  for v_conj in result:
+    print (v_conj)
+
+  return v_conj 
 
 
 
@@ -49,7 +53,7 @@ def index():
     print(request.form)
     #print(request.form['infinitive'])
     verb_query = request.form['infinitive']
-    result_query = query_verb_conj(verb_query)[0] #por enquanto ela s'o retorna falar
+    result_query = query_verb_conj(verb_query) #por enquanto ela s'o retorna falar
     print(result_query)
     return render_template('verb_result.html', verbs=result_query)
 
