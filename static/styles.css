@@ -107,6 +107,7 @@ html, body {
   /* || main layout */
 
   table {
+    display: flex;
     border-collapse: collapse;
     width: 90%;
     border: 1px solid black;
